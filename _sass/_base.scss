@@ -96,17 +96,22 @@ li {
 /**
  * Links
  */
-a {
-    color: $brand-secondary;
-    text-decoration: none;
 
-    &:visited {
-        color: darken($brand-secondary, 15%);
-    }
+a {
+    color: $link-color;
+    text-decoration: $link-hover-decoration;
+
+    // animation
+    -o-transition:.3s;
+    -ms-transition:.3s;
+    -moz-transition:.3s;
+    -webkit-transition:.3s;
+    /* ...and now for the proper property */
+    transition:.3s;
 
     &:hover {
-        color: $text-color;
-        text-decoration: underline;
+        text-decoration: $link-hover-decoration;
+        color: $link-hover-color;
     }
 }
 
@@ -160,7 +165,6 @@ pre {
  * Clearfix
  */
 %clearfix {
-
     &:after {
         content: "";
         display: table;
@@ -174,7 +178,6 @@ pre {
  * Icons
  */
 .icon {
-
     > svg {
         display: inline-block;
         width: 16px;
