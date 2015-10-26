@@ -55,11 +55,12 @@ main { margin-bottom: .5em; }
     color: #777;
     letter-spacing: 2px;
     text-transform: uppercase;
+    font-size: $small-font-size;
 }
 
 nav .listing {
 
-    margin-bottom: 50px;
+    margin-bottom: 65px;
 
     li {
         list-style: none;
@@ -90,9 +91,18 @@ nav .listing {
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 850px ) {
-    main { 
-        max-width: 600px;
-        margin-left: 250px; 
+    main {
+
+        .post {
+            max-width: 700px;
+            font-size: 18px;
+            margin-left: 250px;
+        }
+
+        .wrapper { 
+            max-width: 600px;
+            margin-left: 250px; 
+        }
     }
 
     .sidebar { 

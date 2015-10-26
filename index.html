@@ -2,26 +2,28 @@
 layout: default
 ---
 
-<h3>Recent Posts</h3>
- 
-<nav>
-    <ul class="listing">
-        {% for post in site.posts %}
-        <li>
-            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </li>
-        {% endfor %}
-    </ul>
-</nav>
+<div class="wrapper">
+
+    <nav>
+        <ul class="listing">
+            {% for post in site.posts %}
+            <li>
+                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
 
 
-<h3>Most Recent Post</h3>
+    <article class="article-snapshot">
+    {% for post in site.posts limit:1 %}
+        <h1>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+        </h1>
+        <section class="byline">{{ post.date | date: "%d %B %Y" }}</section>
+        <div>{{ post.content |truncatehtml | truncatewords: 200 }}... <a href="{{ post.url }}">Read More</a></div>
+    {% endfor %}
+    </article>
 
-<article class="article-snapshot">
-{% for post in site.posts limit:1 %}
-    <h3>{{ post.title }}</h3>
-    <p class="blogdate">{{ post.date | date: "%d %B %Y" }}</p>
-    <div>{{ post.content |truncatehtml | truncatewords: 60 }}... <a href="{{ post.url }}">Read More</a></div>
-{% endfor %}
-</article>
+</div>
