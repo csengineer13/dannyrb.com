@@ -1,19 +1,144 @@
 .top-bar {
-    border-top: 8px solid #166088;
+    border-top: 8px solid $primary-color;
     position: fixed;
     width: 100%;
     z-index: 100;
 }
 
-.container {
+.page-container {
     padding-top: 50px;
 }
 
-.main { margin-bottom: .5em; }
+main { margin-bottom: .5em; }
+
+
+.sidebar {
+
+    a {
+        text-decoration: none;
+    }
+
+    .meta {
+        text-align: center;
+        margin-top: 15px;
+
+        a {
+            color: #ddd;
+            transition: all .5s ease-in-out;
+
+            &:hover:first-child { color: rgb(114,49,132); }
+            &:hover:nth-child(2) { color: rgb(85,172,238); }
+            &:hover:nth-child(3) { color: rgb(241,99,3); }
+            &:hover:nth-child(4) { color: rgb(0,0,0); }
+        }
+
+
+        .fa {
+            margin-right: 6px;
+            font-size: 22px;
+        }
+    }
+
+    .pages {
+        margin-top: 15px;
+
+        li {
+            list-style: none;
+            text-align: center;
+        }
+
+        a {
+            color: #000;
+            font-size: 1em;
+            font-weight: bold;
+            width: 50%;
+
+            // "Underline" animation
+            // todo: make a mixin
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            &:before, &:after { 
+                content: '';  
+                position: absolute; 
+                transition: transform .5s ease; 
+            }
+            &:before {
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 2px;
+                background: black;
+                transform:  translateX(-102%);
+            }
+            &:hover:before {
+                transform:  translateX(0);
+            }
+        }
+
+        //     &:before {
+        //         left: 0;
+        //         bottom: 0;
+        //         width: 100%;
+        //         height: 2px;
+        //         background: black;
+        //         transform:  scaleX(0);
+        //     }
+        //     &:hover:before {
+        //         transform:  scaleX(1);
+        //     }
+        // }
+    }
+}
+
+.byline {
+    margin: 10px 0 30px 0;
+    font-size: 10px;
+    color: #777;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+nav .listing {
+    li {
+         font-size: 13px;
+        list-style: none;
+        padding: 5px 3px;
+        margin: 0;
+        color: #777777;   
+    }
+
+    span {
+        font-size: 10px;
+        color: #777;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        float: right;
+    }
+
+    a {
+        color: black;
+        padding-bottom: 2px;
+        border-bottom: 1px dotted #ddd;
+
+        // animation
+        -o-transition:.3s;
+        -ms-transition:.3s;
+        -moz-transition:.3s;
+        -webkit-transition:.3s;
+        /* ...and now for the proper property */
+        transition:.3s;
+
+        &:hover {
+            text-decoration: none;
+            color: $secondary-color;
+        }
+    }
+}
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 47.5em ) {
-    .main { 
+    main { 
         max-width: 650px;
         margin-left: 15.5em; 
     }

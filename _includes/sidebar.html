@@ -1,8 +1,39 @@
 <section class="sidebar">
     
     <div>
-        <img src="/assets/danny_circle.png" />
+        <a href="/" title="Home and Index of Posts">
+            <img src="/assets/danny_circle.png" alt="Author's Profile Image" />
+        </a>
     </div>
-    <div></div>
+    <div class="sidebar-text">
+        <section class="meta">
+            <a href="https://github.com/csengineer13" target="_blank"
+                title="Author's Github Account Page">
+                <i class="fa fa-github"></i>
+            </a>
+            <a href="https://twitter.com/danny_brown13" target="_blank"
+                title="Author's Twitter Account Page">
+                <i class="fa fa-twitter"></i>
+            </a>
+            <a href="http://ux.stackexchange.com/users/73774/daniel-brown" target="_blank"
+                title="Author's StackOverflow UX Account Page">
+                <i class="fa fa-stack-overflow"></i>
+            </a>
+            <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank"
+                title="RSS Feed for Website">
+                <i class="fa fa-rss"></i>
+            </a>
+        </section>
+        <section class="pages">
+            <ul>
+                <li>
+                    <a class="effect-1" href="/about" rel="author">about</a>
+                </li>
+                <li>
+                    <a href="/" title="Home page and index of posts">posts</a>
+                </li>
+            </ul>
+        </section>
+    </div>
 
 </section>
