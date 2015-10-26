@@ -1,10 +1,10 @@
 # Site settings
-title: Your awesome title
+title: dannyrb.com
 email: csengineer13@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  A tech blog covering C#.NET, Javascript, User Experience (UX), Design, and Accessibility. 
+  Authored by full-stack web developer Danny Brown as a means to promote tech literacy and 
+  a better web.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://dannyrb.com" # the base hostname & protocol for your site
 twitter_username: danny_brown13
