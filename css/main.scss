@@ -6,12 +6,12 @@
 
 
 // Colors
-$brand-primary: #166088;
-$brand-secondary: #E84855;
-$brand-success: #000;
-$brand-info: #000;
-$brand-warning: #000;
-$brand-danger: #000;
+$brand-primary: #119DA4;
+$brand-secondary: #FB3640;
+$brand-success: #139A43 ;
+$brand-info: #2E282A;
+$brand-warning: #CD5334;
+$brand-danger: #1B2F33;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -19,16 +19,18 @@ $grey-color-dark:  darken($grey-color, 25%);
 
 // Scaffolding
 $body-bg: #fff;
-$text-color: #333;
-$link-color: #000;
-$link-hover-color: #000;
-$link-hover-decoration: #000;
+$text-color: rgba(0,0,0,0.8);
+$link-color: #FB3640;
+$link-hover-color: rgba(0,0,0,0.8);
+$link-hover-decoration: none;
 
 
-$base-font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$base-font-family: 	'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$post-font-size:	21px;
+$base-font-size:   	18px;
+$listing-font-size: 14px;
+$small-font-size:  	$listing-font-size * 0.875;
+$base-line-height: 	1.5;
 
 $spacing-unit:     30px;
 
