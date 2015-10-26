@@ -14,3 +14,4 @@ github_username:  csengineer13
 markdown: kramdown
 highlighter: rouge
 encoding: utf-8
+permalink: '/posts/:title/'
