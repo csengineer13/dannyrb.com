@@ -5,9 +5,25 @@
 
 
 
-// Our variables
-$primary-color: #166088;
-$secondary-color: #E84855;
+// Colors
+$brand-primary: #166088;
+$brand-secondary: #E84855;
+$brand-success: #000;
+$brand-info: #000;
+$brand-warning: #000;
+$brand-danger: #000;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Scaffolding
+$body-bg: #fff;
+$text-color: #333;
+$link-color: #000;
+$link-hover-color: #000;
+$link-hover-decoration: #000;
+
 
 $base-font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
@@ -16,13 +32,6 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #333;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
 $content-width:    800px;
