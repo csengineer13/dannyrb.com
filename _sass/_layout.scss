@@ -90,6 +90,46 @@ nav .listing {
 }
 
 /* MEDIA QUERIES */
+@media screen and (max-width: 850px ){
+    main {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .sidebar {
+        max-width: 90%;
+        margin: 0 auto 30px auto;
+        height: 150px;
+        
+
+        .author {
+            float: left;
+
+            img{
+                height: 150px;
+            }
+        }
+
+        .sidebar-text {
+            height: 150px;
+            .meta {
+                float:left;
+                width: 22px;
+                margin-left: 10px;
+                &:after { clear: both; }
+
+                .icon {
+                    margin-bottom: 13px;
+                }
+            }
+            .pages {
+                padding-top: 50px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 850px ) {
     main {
 
