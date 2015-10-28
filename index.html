@@ -22,7 +22,7 @@ layout: default
             <a href="{{ post.url }}">{{ post.title }}</a>
         </h1>
         <section class="byline">{{ post.date | date: "%d %B %Y" }}</section>
-        <div>{{ post.content |truncatehtml | truncatewords: 200 }}... <a href="{{ post.url }}">Read More</a></div>
+        <div>{{ post.content |truncatehtml | truncatewords: 150 }}... <a href="{{ post.url }}">Read More</a></div>
     {% endfor %}
     </article>
 
