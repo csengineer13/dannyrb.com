@@ -9,6 +9,11 @@
 main { margin-bottom: .5em; }
 main ul { padding-left: 15px; margin-left: 20px; }
 
+.w-1 { max-width: 100% }
+.w-2 { max-width: 50% }
+.w-3 { max-width: 33% }
+.w-4 { max-width: 25% }
+.w-5 { max-width: 20%; }
 
 .sidebar {
 
@@ -96,7 +101,63 @@ nav .listing {
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 850px ){
+
+// JUST DESKTOP
+@media screen and (min-width: 850px) {
+    /* styles for browsers larger than 850px; */
+    main {
+        .post {
+            max-width: 700px;
+            font-size: 18px;
+            margin-left: 250px;
+        }
+
+        .wrapper { 
+            max-width: 600px;
+            margin-left: 250px; 
+        }
+    }
+
+    .sidebar { 
+        margin-left: 50px;
+
+        position: fixed; 
+        width: 150px;
+        height: 100%; 
+    }
+}
+
+// DESKTOP AND TABLET
+@media screen and (min-width: 480px) {
+    .pull-r {
+        float: right;
+        margin-left: 15px;
+        @clearfix
+    }
+    .pull-l {
+        float: left;
+        margin-right: 15px;
+        @clearfix
+    }
+}
+
+// JUST TABLET
+@media screen and (min-width: 480px) and (max-width: 849px) {
+    /* styles for browsers smaller than 850px, but bigger than 450px 
+    *  Basically, anything we intend to re-adjust in our "mobile only" class
+    */
+
+    .w-1 { max-width: 90% }
+    .w-2 { max-width: 90% }
+    .w-3 { max-width: 45% }
+    .w-4 { max-width: 33% }
+    .w-5 { max-width: 25% }
+}
+
+// TABLET AND MOBILE
+@media screen and (max-width: 849px){
+    /* styles for browsers smaller than 850px */
+    
     main {
         max-width: 90%;
         margin: 0 auto;
@@ -135,27 +196,7 @@ nav .listing {
         }
     }
 }
-
-@media screen and (min-width: 850px ) {
-    main {
-
-        .post {
-            max-width: 700px;
-            font-size: 18px;
-            margin-left: 250px;
-        }
-
-        .wrapper { 
-            max-width: 600px;
-            margin-left: 250px; 
-        }
-    }
-
-    .sidebar { 
-        margin-left: 50px;
-
-        position: fixed; 
-        width: 150px;
-        height: 100%; 
-    }   
+// MOBILE
+@media screen and (max-width: 479px ){
+    .w-3, .w-4, .w-5 { max-width: 90%; margin: 0 auto;}
 }
