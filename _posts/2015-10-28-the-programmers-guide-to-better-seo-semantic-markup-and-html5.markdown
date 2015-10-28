@@ -16,59 +16,77 @@ categories: seo html5
 
 Unfortunately, most websites are uneccessarily hard for these bots to read. Because of this, the bots are forced to make "best guesses" about the content; often causing less than optimal page rank (and thereby hurting SEO).
 
-##Semantic Markup: Speaking the Same Language
+##Semantic vs. Non-Semantic
 
-What's wrong with this code?
+Humans can see web page styles. This allows us to group content and understand each element's context _regardless of the underlying DOM elements_. Robots lack this ability. When a bot reads a web page, it ignores all of the styling and uses the HTML tags to understand what it's looking at.
 
-Two images: Non-Semantic vs Semantic
+<figure class="w-3 pull-l">
+	<img src="{{ page.url  | replace:'/posts/','/' | prepend: '/assets' }}non-semantic-layout.png" alt="" />
+</figure>
 
-http://www.w3schools.com/html/html5_semantic_elements.asp
+###Non-Semantic
+With all of the styling ripped away, and using non-semantic elements (like `<span>` and `<div>`), this is what a bot would see. Going off of this structure alone, the bot is forced to make "best guesses" about the context of the page's content. 
 
-<!-- {% highlight html %}
+> Do you know where to find the unique content on this page? Do you know which content isn't relevant?
 
-<div>
-	<div class="js-link" target="home">Home</div>
-	<div class="js-link" target="about">About</div>
-</div>
-<div class="js-link ad-bar" target="affiliat-1">Drink more Chipmunk Milk!</div>
-<div>
-	<div class="myh">Chipmunks Love Candy</div>
-	<div class="byline">By: Joe Shmo</div>
-	<div>Chipmunks do love candy, but they get tired of it quickly. My independent 
-	research shows that...<div class="js-link" target="article-1">Read More</div></div>
-</div>
-<div>Chipmonk Co. Copyright 2015</div>
+I'm sure you can make some educated guesses. But it's hard to know for sure.
 
-{% endhighlight %}
+<figure class="w-3 pull-r">
+	<img src="{{ page.url  | replace:'/posts/','/' | prepend: '/assets' }}semantic-layout.png" alt="" />
+</figure>
 
-{% highlight html %}
+###Semantic
+By using semantic elements, how and where to find the different kinds of information on our web page becomes much clearer. Bots can now find: 
 
-<header>
-	<nav>
-		<ul>
-			<li><a href="/home">Home</a></li>
-			<li><a href="/about">About</a></li>
-		</ul>
-	</nav>
-</header>
-<section class="top-add">Drink more Chipmunk Milk!</section>
-<main>
-	<article>
-		<h1>Chipmunks Love Candy</h1>
-		<div class="byline">By: Joe Shmo</div>
-		<p>Chipmunks do love candy, but they get tired of it quickly. My independent 
-		research shows that... <a href="/posts/chipmunks-love-candy">Read More</a></p>
-	</article>
-</main>
-<footer>Chipmonk Co. Copyright 2015</footer>
+- Content unique to our page
+- Where one article stops and another begins
+- The components that make up each article
+- Etc.
 
-{% endhighlight %} -->
+We can use semantic elements (basically "more descriptive `<div>` tags) to provide context and clarity. But what elements do we have at our disposal? What are the rules that govern when and how we should use them?
+
+
+##Being Semantically Correct
+
+There are two different kinds of semantic elements: [Sectioning Elements](http://blog.teamtreehouse.com/use-html5-sectioning-elements) and.. uh.. [All of the other ones](http://www.w3schools.com/tags/default.asp). Where Sectioning Elements are basically more descriptive containers than a `<div>`, and the remaining elements imply or add additional behavior (`<a href=""></a>`, `<p></p>`, etc.)
+
+###Sectioning Elements
+
+- include a list of sectioning elements
+
+For sectioning elements, there are only a few non-obvious rules regarding their usage:
+
+- `<main>` Represents the main content of the page. There should only be one. You should not place &lt;main&gt; inside another semantic element.
+- `<article>` Should make sense if distributed outside the context of the page. Can contain other articles. Should have a heading.
+- `<aside>`
+- `<address>`
+
+The remaining elements can be used any number of ways so long as their meaning is preserved. For example, your page can have a `<footer>`, but so can `<article>`s.
+
+Still confused about the when, where, how, and whys of Sectioning Elements? [Tree House](https://teamtreehouse.com/) has a great article that [explains their different use cases/implementations](http://blog.teamtreehouse.com/use-html5-sectioning-elements), and HTML5 Doctor has a [great flow-chart](http://html5doctor.com/downloads/h5d-sectioning-flowchart.png) that walks you through picking the right element.
+
+###Other Elements
+
+- H1 through H6
+- Links
+- Paragraph
+- Basically.. Don't abuse them
+
+
+##FAQ
+
+// Why not `<zoidberg>`?
+
+
+##Next Steps
+
 
 
 - HTML5 "Flow" Tags
 - MicroData & Schema.org
 - MetaData
-- https://www.google.com/webmasters/markup-helper/u/0/
+- [asdasd](https://www.google.com/webmasters/markup-helper/u/0/)
+- [asdasd](MicroFormats? http://html5doctor.com/microformats/)
 
 
 
