@@ -48,24 +48,25 @@ We can use semantic elements (basically "more descriptive `<div>` tags) to provi
 
 ##Being Semantically Correct
 
-There are two different kinds of semantic elements: [Sectioning Elements](http://blog.teamtreehouse.com/use-html5-sectioning-elements) and.. uh.. [All of the other ones](http://www.w3schools.com/tags/default.asp). Where Sectioning Elements are basically more descriptive containers than a `<div>`, and the remaining elements imply or add additional behavior (`<a href=""></a>`, `<p></p>`, etc.)
+There are two different kinds of semantic elements: [Sectioning Elements](http://blog.teamtreehouse.com/use-html5-sectioning-elements) and.. uh.. [All of the other ones](http://www.w3schools.com/tags/default.asp). Where Sectioning Elements are more descriptive versions of the classic `<div>`, and the remaining elements imply or add additional behavior (`<a href=""></a>`, `<p></p>`, etc.)
 
 ###Sectioning Elements
 
-- include a list of sectioning elements
+`<main>` `<article>` `<section>` `<nav>` `<aside>` `<header>` `<footer>` `<address>`
 
 For sectioning elements, there are only a few non-obvious rules regarding their usage:
 
 - `<main>` Represents the main content of the page. There should only be one. You should not place &lt;main&gt; inside another semantic element.
 - `<article>` Should make sense if distributed outside the context of the page. Can contain other articles. Should have a heading.
-- `<aside>`
+- `<aside>` Much like a [play's aside](https://en.wikipedia.org/wiki/Aside), content in an aside breaks away from the normal flow. It is usually related, and expands on something. Commonly contains `<figures>`, groups of `<nav>`s and quotes.
 - `<address>`
 
-The remaining elements can be used any number of ways so long as their meaning is preserved. For example, your page can have a `<footer>`, but so can `<article>`s.
+The remaining sectioning elements can be used any number of ways so long as their meaning is preserved. For example: your webpage can have a `<footer>`, but an `<artical>` can also have a `<footer>`.
 
-Still confused about the when, where, how, and whys of Sectioning Elements? [Tree House](https://teamtreehouse.com/) has a great article that [explains their different use cases/implementations](http://blog.teamtreehouse.com/use-html5-sectioning-elements), and HTML5 Doctor has a [great flow-chart](http://html5doctor.com/downloads/h5d-sectioning-flowchart.png) that walks you through picking the right element.
+####Still confused? 
+[Tree House](https://teamtreehouse.com/) has a great article that [examines each sectioning element](http://blog.teamtreehouse.com/use-html5-sectioning-elements), and HTML5 Doctor has a [great flow-chart](http://html5doctor.com/downloads/h5d-sectioning-flowchart.png) that walks you through picking the right element.
 
-###Other Elements
+###Other Semantic Elements
 
 - H1 through H6
 - Links
