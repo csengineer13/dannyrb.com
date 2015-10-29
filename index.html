@@ -18,11 +18,13 @@ layout: default
 
     <article class="article-snapshot">
     {% for post in site.posts limit:1 %}
-        <h1>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-        </h1>
-        <section class="byline">{{ post.date | date: "%d %B %Y" }}</section>
-        <div>{{ post.content |truncatehtml | truncatewords: 150 }}... <a href="{{ post.url }}">Read More</a></div>
+        <header>
+            <h1>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+            </h1>
+            <div class="byline">{{ post.date | date: "%d %B %Y" }}</div>
+        </header>
+        <section>{{ post.content |truncatehtml | truncatewords: 150 }}... <a href="{{ post.url }}">Read More</a></section>
     {% endfor %}
     </article>
 
