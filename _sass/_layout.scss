@@ -6,8 +6,13 @@
 }
 
 .page-container { padding-top: 50px; }
-main { margin-bottom: .5em; }
-main ul { padding-left: 15px; margin-left: 20px; }
+main { 
+    margin-bottom: .5em; 
+    .post {
+        font-size: $post-font-size;
+    }
+}
+article ul { padding-left: 15px; margin-left: 20px; }
 
 .w-1 { max-width: 100% }
 .w-2 { max-width: 50% }
@@ -34,12 +39,13 @@ main ul { padding-left: 15px; margin-left: 20px; }
 
         .icon {
             margin-right: 6px;
-            font-size: 22px;
+            font-size: 21px;
         }
     }
 
     .pages {
         margin-top: 15px;
+        font-size: 18px;
 
         li {
             list-style: none;
@@ -106,12 +112,13 @@ nav .listing {
 @media screen and (min-width: 850px) {
     /* styles for browsers larger than 850px; */
     main {
+        // post
         .post {
             max-width: 700px;
-            font-size: 18px;
             margin-left: 250px;
         }
 
+        // index
         .wrapper { 
             max-width: 600px;
             margin-left: 250px; 
@@ -152,6 +159,18 @@ nav .listing {
     .w-3 { max-width: 45% }
     .w-4 { max-width: 33% }
     .w-5 { max-width: 25% }
+}
+
+
+@media screen and (max-width: 730px){ 
+    // Scale fonts down
+    main .post { font-size: $base-font-size; }
+}
+
+@media screen and (max-width: 630px){ 
+    // Scale fonts down
+    main .post { font-size: 14px; }
+    body { font-size: 14px; }
 }
 
 // TABLET AND MOBILE
@@ -199,4 +218,8 @@ nav .listing {
 // MOBILE
 @media screen and (max-width: 479px ){
     .w-3, .w-4, .w-5 { max-width: 90%; margin: 0 auto;}
+    .listing li {
+        span { display: block; float: none;}
+        a { float: left; width: 100%; }
+    }
 }

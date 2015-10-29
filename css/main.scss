@@ -26,10 +26,10 @@ $link-hover-decoration: none;
 
 
 $base-font-family: 	'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$post-font-size:	21px;
+$post-font-size:	21px; // em
 $base-font-size:   	18px;
 $listing-font-size: 14px;
-$small-font-size:  	$listing-font-size * 0.875;
+$small-font-size:  	0.6em;
 $base-line-height: 	1.5;
 
 $spacing-unit:     30px;
