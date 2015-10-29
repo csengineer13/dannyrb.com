@@ -4,8 +4,10 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+I'm Danny, a full-stack web developer at [Renovo Solutions](http://renovo1.com/), a medical equipment service and management company located in Hartville, Ohio.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+I created this blog to promote tech literacy and giving back to the tech community. It's also a personal growth challenge to continue my own research and education in tech. You can find me hanging around the [UX StackExchange](http://ux.stackexchange.com/), at local [meetups](http://www.meetup.com/akron-io/), and outdoors playing tennis when the weather cooperates.
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+This website was generated using [Jekyll](https://jekyllrb.com/).
+
+The source of this site is available on [Github](https://github.com/csengineer13/dannyrb.com).
