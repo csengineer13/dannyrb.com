@@ -44,7 +44,7 @@ ul, ol, dl, figure,
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     margin-top: 18px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 
@@ -62,8 +62,20 @@ h2 {
     font-weight: 400;
 }
 
+h3 {
+    font-size: 1.5em;
+    margin: 40px 0 20px 0;
+    border-left: 5px solid $brand-primary;
+    padding-left: 10px;
+    font-weight: 400;
+}
+
 h4 {
-    border-bottom: 1px dotted $text-color;
+    font-size: 1.2em;
+    margin: 30px 0 15px 0;
+    border-left: 5px solid $text-color;
+    padding-left: 10px;
+    font-weight: 400;
 }
 
 /**
@@ -151,6 +163,7 @@ code {
     border: 1px solid $grey-color-light;
     border-radius: 3px;
     background-color: #eef;
+    // background-color: #272822
 }
 
 code {
