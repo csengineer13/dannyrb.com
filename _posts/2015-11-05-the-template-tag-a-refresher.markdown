@@ -1,17 +1,48 @@
 ---
-layout: post
-title:  "The Template Tag: A Refresher"
-date:   2015-10-28 13:00:00
-categories: webcomponents shadowdom polyfills
+ispost: 		true
+layout: 		post
+title: 			"The Template Tag: A Refresher"
+date: 			2015-11-05 11:00:00
+published:	 	"2015-11-05T11:00:00+01:00"
+categories: 	webcomponents, template, polyfills
+description: 	"The only remaining browser has begun to implement the template tag. With full cross-browser support in the near future, it's time for a template tag refresher."
+ogimg: 			"http://dannyrb.com/assets/the-template-tag-a-refresher/fb-final-jpg.jpg"
+googleimg: 		"http://dannyrb.com/assets/the-template-tag-a-refresher/fb-final-jpg.jpg"
+twitterimg: 	"http://dannyrb.com/assets/the-template-tag-a-refresher/twitter-final-jpg.jpg"
 ---
 
 The `<template>` specification was [introduced in 2011](https://fronteers.nl/congres/2011/sessions/web-components-and-model-driven-views-alex-russell), along with the other three specs that make up WebComponents. Since then, `<template>` has become a part of the [W3C Living Document](http://www.w3.org/TR/html5/scripting-1.html#the-template-element), and has full support in Chrome, Firefox, Opera, Safari, and Android. To boot, Edge has just announced [upcomming support](https://dev.modern.ie/platform/status/templateelement/).
 
-In light of that announcement, a 
+In light of that announcement, let's refresh (:
 
 ##Native Templates
 
-The anatomy of a template is simple. It is any chunk of markup, styles, and javascript that is wrapped in `<template>` tags. A template can even include another template! Here is a basic example:
+Before the `<template>` tag was introduced we still had templates, but to get them to work, we had to abuse existing functionality. The two most common techniques were:
+
+
+1. Hide the DOM off screen
+{% highlight html %}
+<div class="hidden-template" id="template-22">
+    <!-- My template's contents -->
+</div>
+{% endhighlight %}
+
+
+<ol start="2">
+	<li>Abusing the <code>&lt;script&gt;</code> tag</li>
+</ol>
+{% highlight html %}
+<script id="simple-template" type="text/x-handlebars-template">
+  // My template's contents
+</script> 
+{% endhighlight %}
+
+Both of these techniques are not ideal. The first is clunky and can be accidentally modified by DOM manipulation. The latter exposes us to potential cross-site scripting attacks. The `<template>` element seeks to solve these issues, and also provides additional benefits.
+
+
+###The Anatomy of a Template
+
+The anatomy of a template is simple. It is any set of markup, styles, and javascript that is wrapped in `<template>` tags. A template can even include another template! Here is a basic example:
 
 {% highlight html %}
 <template id="simple">
@@ -174,16 +205,19 @@ Until we get full cross-browser support, it's fairly safe to rely on Polyfills f
 - [WebComponents.js](https://github.com/webcomponents/webcomponentsjs) (Google Backed)
 - [Polyfill To Add IE Support](http://stackoverflow.com/questions/16055275/html-templates-javascript-polyfills)
 
+Even so, unless your target browser support is IE11+, you probably shouldn't be using `<template>` in production.
+
 ##What Next?
 
 Templates lay the groundwork for the real meat and potatoes of [WebComponents](http://webcomponents.org/). To fully leverage their power, you may want to check out:
 
 - [Continuing your education on the `<template>` tag](http://www.html5rocks.com/en/tutorials/webcomponents/template/)
 - Learning about [Custom Elements](http://www.html5rocks.com/en/tutorials/webcomponents/customelements/) (_hint_ they use templates)
-- Learn more about polyfills
+- Learn more about [polyfills](https://remysharp.com/2010/10/08/what-is-a-polyfill)
 
 ###Resourcess
 
-- This article in MarkdDown format [on GitHub]()
+- This article in Markdown format [on GitHub](https://github.com/csengineer13/dannyrb.com/blob/master/_posts/2015-11-05-the-template-tag-a-refresher.markdown)
 - "Simple Template" [Example on GitHub](https://github.com/lug-io/WebComponents-Examples/blob/master/templates/simple/index.html)
 - "Data-Bind Template" [Example on GitHub](https://github.com/lug-io/WebComponents-Examples/blob/master/templates/table/index.html)
+- Track [`<template>`s browser support](http://caniuse.com/#search=template)

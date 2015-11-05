@@ -1,8 +1,14 @@
 ---
-layout: post
-title:  "The Programmer's Guide to Better SEO: Semantic Markup and HTML5"
-date:   2015-10-28 13:00:00
-categories: seo html5
+ispost: 		true
+layout: 		post
+title:  		"The Programmer's Guide to Better SEO: Semantic Markup and HTML5"
+date:   		2015-10-28 13:00:00
+published:	 	"2015-10-28T13:00:00+01:00"
+categories: 	seo, html5
+description: 	"Search engine bots have issues reading most web pages. To improve search ranking, implement these tips to make your web page easier to read."
+ogimg: 			"http://dannyrb.com/assets/the-programmers-guide-to-better-seo-semantic-markup-and-html5/google-bot.png"
+googleimg: 		"http://dannyrb.com/assets/the-programmers-guide-to-better-seo-semantic-markup-and-html5/google-bot.png"
+twitterimg: 	"http://dannyrb.com/assets/the-programmers-guide-to-better-seo-semantic-markup-and-html5/google-bot.png"
 ---
 
 **Disclaimer:** Content is king. Provide value, make yourself accessible, make your website easy to navigate and easy to understand for your users. Everything detailed below is about Search Engine _OPTIMIZATION_, and is not worth a thought until you have something worth optimizing.
