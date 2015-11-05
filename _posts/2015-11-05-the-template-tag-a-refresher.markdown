@@ -11,7 +11,7 @@ googleimg: 		"http://dannyrb.com/assets/the-template-tag-a-refresher/fb-final-jp
 twitterimg: 	"http://dannyrb.com/assets/the-template-tag-a-refresher/twitter-final-jpg.jpg"
 ---
 
-The `<template>` specification was [introduced in 2011](https://fronteers.nl/congres/2011/sessions/web-components-and-model-driven-views-alex-russell), along with the other three specs that make up WebComponents. Since then, `<template>` has become a part of the [W3C Living Document](http://www.w3.org/TR/html5/scripting-1.html#the-template-element), and has full support in Chrome, Firefox, Opera, Safari, and Android. To boot, Edge has just announced [upcomming support](https://dev.modern.ie/platform/status/templateelement/).
+The `<template>` specification was [introduced in 2011](https://fronteers.nl/congres/2011/sessions/web-components-and-model-driven-views-alex-russell), along with the other three specs that make up WebComponents. Since then, `<template>` has become a part of the [W3C Living Document](http://www.w3.org/TR/html5/scripting-1.html#the-template-element), and has full support in Chrome, Firefox, Opera, Safari, and Android. To boot, Edge has just announced [upcoming support](https://dev.modern.ie/platform/status/templateelement/).
 
 In light of that announcement, let's refresh (:
 
@@ -70,11 +70,11 @@ This code can live anywhere inside the `<head>` or `<body>`. It's also important
 
 **_Inert_**
 
-This means that the javascript and css plays no role in modifying the page. The code is not active until the template has been cloned and added to the page.
+This means that the Javascript and CSS play no role in modifying the page. The code is not active until the template has been cloned and added to the page.
 
 **_Hidden from CSS and Selectors_**
 
-Your template's content cannot be selected or modified with css or query selectors. This is to protect it from accidental changes, and for performance reasons.
+Your template's content cannot be selected or modified with CSS or query selectors. This is to protect it from accidental changes, and for performance reasons.
 
 ####But.. How do we use our template?
 
@@ -161,26 +161,26 @@ Please Note:
 // ADD ROW
 function addRow()
 {
-	// Grab our template
-	var t = document.querySelector('template#table-row').content;
+    // Grab our template
+    var t = document.querySelector('template#table-row').content;
 
-	// Optional -- Modify template
-	var form = document.querySelector('#data-binding-form');
+    // Optional -- Modify template
+    var form = document.querySelector('#data-binding-form');
 
-	var age = form.querySelector("#age-field").value; 		
-	//var age = $("#data-binding-form #age-field"); // Equiv
-	var name = form.querySelector("#name-field").value;
-	var gender = form.querySelector("#gender-field").value;
+    var age = form.querySelector("#age-field").value; 		
+    //var age = $("#data-binding-form #age-field"); // Equiv
+    var name = form.querySelector("#name-field").value;
+    var gender = form.querySelector("#gender-field").value;
 
-	t.querySelectorAll("td:first-child")[0].innerHTML = name;
-	t.querySelectorAll("td:nth-child(2)")[0].innerHTML = age;
-	t.querySelectorAll("td:last-child")[0].innerHTML = gender;
+    t.querySelectorAll("td:first-child")[0].innerHTML = name;
+    t.querySelectorAll("td:nth-child(2)")[0].innerHTML = age;
+    t.querySelectorAll("td:last-child")[0].innerHTML = gender;
 
-	// Clone/activate template & add to page
-	var clone = document.importNode(t, true);
-	$("#persons-table tr:last").after(clone);
+    // Clone/activate template & add to page
+    var clone = document.importNode(t, true);
+    $("#persons-table tr:last").after(clone);
 
-	return false; // Stop submit event from bubbling up
+    return false; // Stop submit event from bubbling up
 }
 {% endhighlight %}
 
@@ -202,20 +202,22 @@ You get the idea. Not super intuitive, but it works. This is likely where we'll 
 
 Until we get full cross-browser support, it's fairly safe to rely on Polyfills for `<template>` as they're simple and performant. Here are some examples of polyfill use:
 
-- [WebComponents.js](https://github.com/webcomponents/webcomponentsjs) (Google Backed)
+- [WebComponents.js](https://github.com/webcomponents/webcomponentsjs) (Google-Backed)
 - [Polyfill To Add IE Support](http://stackoverflow.com/questions/16055275/html-templates-javascript-polyfills)
+- [Example Polyfill Use](http://jsfiddle.net/brianblakely/h3EmY/) (IE6/7 Support)
 
-Even so, unless your target browser support is IE11+, you probably shouldn't be using `<template>` in production.
+Even so, unless your target browser support is IE11+, you probably shouldn't be using `<template>` in production. If anyone has any sources that show otherwise, please let me know! (:
 
-##What Next?
+##Next Steps?
 
 Templates lay the groundwork for the real meat and potatoes of [WebComponents](http://webcomponents.org/). To fully leverage their power, you may want to check out:
 
 - [Continuing your education on the `<template>` tag](http://www.html5rocks.com/en/tutorials/webcomponents/template/)
+- [Annnddd some more education](http://blog.teamtreehouse.com/creating-reusable-markup-with-the-html-template-element)
 - Learning about [Custom Elements](http://www.html5rocks.com/en/tutorials/webcomponents/customelements/) (_hint_ they use templates)
 - Learn more about [polyfills](https://remysharp.com/2010/10/08/what-is-a-polyfill)
 
-###Resourcess
+###Resources
 
 - This article in Markdown format [on GitHub](https://github.com/csengineer13/dannyrb.com/blob/master/_posts/2015-11-05-the-template-tag-a-refresher.markdown)
 - "Simple Template" [Example on GitHub](https://github.com/lug-io/WebComponents-Examples/blob/master/templates/simple/index.html)
