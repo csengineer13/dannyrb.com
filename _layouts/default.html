@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html>
+{% if page.ispost %}<html itemscope itemtype="http://schema.org/Article">
+{% else %}<html>
+{% endif %}
 
   {% include head.html %}
 
