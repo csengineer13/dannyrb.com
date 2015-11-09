@@ -11,7 +11,7 @@ googleimg: 		"http://dannyrb.com/assets/the-template-tag-a-refresher/fb-final-jp
 twitterimg: 	"http://dannyrb.com/assets/the-template-tag-a-refresher/twitter-final-jpg.jpg"
 ---
 
-The `<template>` specification was [introduced in 2011](https://fronteers.nl/congres/2011/sessions/web-components-and-model-driven-views-alex-russell), along with the other three specs that make up WebComponents. Since then, `<template>` has become a part of the [W3C Living Document](http://www.w3.org/TR/html5/scripting-1.html#the-template-element), and has full support in Chrome, Firefox, Opera, Safari, and Android. To boot, Edge has just announced [upcoming support](https://dev.modern.ie/platform/status/templateelement/).
+The `<template>` specification was [introduced in 2011](https://fronteers.nl/congres/2011/sessions/web-components-and-model-driven-views-alex-russell), along with the other three specs that make up WebComponents. Since then, `<template>` has become a part of the [W3C Living Document](http://www.w3.org/TR/html5/scripting-1.html#the-template-element), and has full support in Chrome, Firefox, Opera, Safari, and Android. To boot, Edge has just announced [upcoming support](https://dev.modern.ie/platform/status/templateelement/). 
 
 In light of that announcement, let's refresh (:
 
@@ -89,7 +89,7 @@ function addSimple(){
 
     // Clone and add
     var clone = document.importNode(t, true);
-    $("#simple-target").append(clone);
+    document.getElementById("simple-target").appendChild(clone);
 }
 {% endhighlight %}
 
@@ -172,13 +172,19 @@ function addRow()
     var name = form.querySelector("#name-field").value;
     var gender = form.querySelector("#gender-field").value;
 
-    t.querySelectorAll("td:first-child")[0].innerHTML = name;
-    t.querySelectorAll("td:nth-child(2)")[0].innerHTML = age;
-    t.querySelectorAll("td:last-child")[0].innerHTML = gender;
+    t.querySelector("td:first-child").innerHTML = name;
+    t.querySelector("td:nth-child(2)").innerHTML = age;
+    t.querySelector("td:last-child").innerHTML = gender;
 
     // Clone/activate template & add to page
     var clone = document.importNode(t, true);
-    $("#persons-table tr:last").after(clone);
+    $("#persons-table tr:last").after(clone);   // .after() is using jQuery
+
+    // Vanilla JS of .after();
+    //var allRows = document.querySelectorAll("table tr");
+    //var lastRow = allRows[allRows.length- 1];
+
+    //lastRow.parentNode.insertBefore(clone, lastRow.nextSibling);
 
     return false; // Stop submit event from bubbling up
 }
@@ -223,3 +229,8 @@ Templates lay the groundwork for the real meat and potatoes of [WebComponents](h
 - "Simple Template" [Example on GitHub](https://github.com/lug-io/WebComponents-Examples/blob/master/templates/simple/index.html)
 - "Data-Bind Template" [Example on GitHub](https://github.com/lug-io/WebComponents-Examples/blob/master/templates/table/index.html)
 - Track [`<template>`s browser support](http://caniuse.com/#search=template)
+
+
+###FAQ
+
+Questions from [this reddit thread](https://www.reddit.com/r/web_design/comments/3rmu57/html5s_template_tag_a_refresher/) and comments below will eventually be aggregated here
