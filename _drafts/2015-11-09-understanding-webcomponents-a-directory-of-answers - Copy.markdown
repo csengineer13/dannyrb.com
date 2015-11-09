@@ -11,24 +11,24 @@ googleimg: 		"http://dannyrb.com/assets/the-programmers-guide-to-better-seo-sema
 twitterimg: 	"http://dannyrb.com/assets/the-programmers-guide-to-better-seo-semantic-markup-and-html5/google-bot.png"
 ---
 
-WebComponents were announced in 2011, but [until recently](http://blogs.windows.com/msedgedev/2015/07/15/microsoft-edge-and-web-components/) cross-browser support in the near future looked bleak. Given this news, I thought I should finally give WebComponents the attention it deserves. Below is a collection of my notes, and where to find additional resources.
+WebComponents were announced in 2011, but [until recently](http://blogs.windows.com/msedgedev/2015/07/15/microsoft-edge-and-web-components/) cross-browser support in the near future looked bleak. Given Microsoft's renewed commitment to WebComponents and [two recent, incredible meetings between browser vendors](http://www.2ality.com/2015/08/web-component-status.html), I thought I should finally give WebComponents the attention it deserves. Below is a collection of my notes, and where to find additional resources.
 
 
 ##Index &amp; Terms
 
-- [Foundation vs. Abstraction](#foundation-vs-abstraction)
-- [WebComponents](#webcomponents)
-	- [Templates](#templates)
-	- [Custom Elements](#custom-elements)
-	- [Shadow DOM &amp; Light DOM](#shadow-dom-and-light-dom)
-		- [Shadow Root](#shadow-root)
-		- [Shadow Boundary](#shadow-boundary)
-		- [Shadow Host](#shadow-host)
-		- [DOM Subtrees](#dom-subtrees)
-	- [HTML Imports](#html-imports)
-- [Polyfill](#polyfills)
-- [Polymer](#polymer)
-- [News &amp; Support](#news)
+- [Foundation vs. Abstraction]({{ page.url }}#foundation-vs-abstraction)
+- [WebComponents]({{ page.url }}#webcomponents)
+	- [Templates]({{ page.url }}#templates)
+	- [Custom Elements]({{ page.url }}#custom-elements)
+	- [Shadow DOM &amp; Light DOM]({{ page.url }}#shadow-dom-and-light-dom)
+		- [Shadow Root]({{ page.url }}#shadow-root)
+		- [Shadow Boundary]({{ page.url }}#shadow-boundary)
+		- [Shadow Host]({{ page.url }}#shadow-host)
+		- [DOM Subtrees]({{ page.url }}#dom-subtrees)
+	- [HTML Imports]({{ page.url }}#html-imports)
+- [Polyfill]({{ page.url }}#polyfills)
+- [Polymer]({{ page.url }}#polymer)
+- [News &amp; Support]({{ page.url }}#news)
 
 
 
