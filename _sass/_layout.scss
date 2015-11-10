@@ -14,7 +14,13 @@ main {
 }
 article ul, article ol { padding-left: 15px; margin-left: 20px; }
 
-.w-1 { max-width: 100% }
+.w-1 { 
+    max-width: 100%;
+    img {
+        margin: 0 auto;
+        display: block;
+    }
+}
 .w-2 { max-width: 50% }
 .w-3 { max-width: 33% }
 .w-4 { max-width: 25% }
