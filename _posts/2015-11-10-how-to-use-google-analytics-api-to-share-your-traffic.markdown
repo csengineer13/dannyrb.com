@@ -4,11 +4,11 @@ layout: 		  post
 title:  		  "How To Use Google Analytics' API To Share Your Traffic"
 date:   		  2015-11-10 11:00:00
 published:	 	"2015-11-10T11:00:00+01:00"
-categories: 	seo, html5
-description: 	"Search"
-ogimg: 			  ""
-googleimg: 		""
-twitterimg: 	""
+categories: 	google analytics api, open source, php, javascript
+description: 	"Open source your website's traffic using Google Analytics, service accounts, and Google's new Embedded API server-side authentication methods."
+ogimg: 			  "http://dannyrb.com/assets/how-to-use-google-analytics-api-to-share-your-traffic/fb-final.png"
+googleimg: 		"http://dannyrb.com/assets/how-to-use-google-analytics-api-to-share-your-traffic/fb-final.png"
+twitterimg: 	"http://dannyrb.com/assets/how-to-use-google-analytics-api-to-share-your-traffic/fb-final.png"
 ---
 
 This is a "proof of concept" post on open sourcing your website's traffic data. A number of enhancements, both visual and performance wise, can be made. This post walks you through getting the data into your hands, so you can do with it what you will (:
