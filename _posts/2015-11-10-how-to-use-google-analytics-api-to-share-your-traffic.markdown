@@ -13,7 +13,7 @@ twitterimg: 	"http://dannyrb.com/assets/how-to-use-google-analytics-api-to-share
 
 This is a "proof of concept" post on open sourcing your website's traffic data. A number of enhancements, both visual and performance wise, can be made. This post walks you through getting the data into your hands, so you can do with it what you will (:
 
-**Finished Product:** [Example Here](http://dannyrb.com/traffic/)
+**Finished Product:** [Advanced](http://dannyrb.com/traffic/) == OR == [Basic](http://dannyrb.com/traffic/examples/embedded-api-render.php)
 
 **Project on GitHub:** [Click Here](https://github.com/csengineer13/google-analytics-traffic)
 
