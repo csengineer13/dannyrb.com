@@ -1,23 +1,24 @@
 #[dannyrb.com](http://dannyrb.com)
 
-Pet blog website where I try to serve up confusing or expansive concepts in bite-sized, manageble chunks.
+A basic website where I try to serve up confusing or expansive concepts in bite-sized, manageble chunks.
 
-##TODO##
 
-###Refactors###
+### Notes
 
-- HTML5 Semantic markup
-- MetaData (per-post)
-- Microdata
-- Social Share refactor
-- Global Styles refactor
+_Run site locally_
+`bundle exec jekyll serve`
 
-###Features###
+_Update Bundlr/gems_
+`bundle update github-pages` or `bundle update`
 
-- Hamburger-ize menu on mobile?
-- Global Footer?
-- Author at bottom on mobile?
 
-####To Post Template####
+### References
 
-- Add Salutation
+* [GitHub Pages + Jekyll Guide](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)
+* [Jekyll Guide](https://jekyllrb.com/)
+* [Bundlr](http://bundler.io/)
+
+
+#### To Do:
+- Start star field small, with an option to expand down
+- 

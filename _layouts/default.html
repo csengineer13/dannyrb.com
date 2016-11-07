@@ -7,11 +7,15 @@
 
   <body>
 
+{% if page.ispost %}
+    {% include post-header.html %}
+{% else %}
     {% include header.html %}
+{% endif %}
+
+    {% include nav.html %}
 
     <div class="page-container">
-
-        {% include sidebar.html %}
 
         <main role="main">
             {{ content }}
